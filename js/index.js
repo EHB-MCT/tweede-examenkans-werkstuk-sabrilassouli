@@ -51,6 +51,7 @@ function showArtikles(ArtikelsData) {
             <img src='${element.artikelImage}' class="artikelImage">
             <p class="artikelContent">${element.artikelContent}</p>
             <p class="artikelLikes">${element.artikelLikes}</p>
+            <button class="likeButton">Like</button>
             <p class="artikelpublicationDate">${element.artikelpublicationDate}</p>
              </div>
              `;
@@ -59,10 +60,30 @@ function showArtikles(ArtikelsData) {
 
     containerElement.innerHTML = "";
     containerElement.innerHTML = htmlContent;
-
+    
+    let likebuttons = document.getElementsByClassName('likeButton');
+    
+    for (let i = 0; i < likebuttons.length; i++) {
+        likebuttons[i].addEventListener('click', function() {
+            console.log("Hallo", ArtikelsData[i].artikelUUID);
+            likeArtikel(ArtikelsData[i].artikelUUID);
+        });
+    }
   
 
 }
+
+// posting like 
+function likeArtikel(id) {
+    fetch(`https://thecrew.cc/news/create.php`, {
+            method: 'POST',
+            body: JSON.stringify({
+                "UUID": id
+            })
+        });
+}
+
+
 
 //making a searchbar
 
@@ -80,3 +101,5 @@ searchBarInput.addEventListener('keyup', (e) => {
     });
     showArtikles(filteredArtikels);
 });
+
+
