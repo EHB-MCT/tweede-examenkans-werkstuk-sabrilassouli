@@ -1,7 +1,7 @@
+  
 body {
   font-family: sans-serif;
   padding: 20px;
-  background-color: #413f3b;
 }
 
 * {
@@ -9,31 +9,11 @@ body {
   padding: 0;
   color: #0d0d0d;
 }
-
 main {
   margin: auto;
   display: flex;
 }
-
 #container {
   width: 100vw;
-  height: 100vh;
-}
-
-h3 {
-  padding-top: 150px;
-  font-size: 30px;
-}
-
-img {
-  width: 90%;
-}
-
-main {
-  text-align: center;
-}
-
-article {
-  background-color: aliceblue;
-  border-bottom: 10px solid #413f3b;
+  height:  100vh;
 }
