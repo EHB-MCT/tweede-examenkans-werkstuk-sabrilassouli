@@ -5,11 +5,9 @@
 //https://thecrew.cc/news/read.php
 
 
-// array van artikels fetchen
 // arrays sorten op likes
 // liken functie
 // searchbar toevoegen met search functie
-
 
 class Artikels {
     constructor(artikelUUID, artikelTitle, artikelImage, artikelContent, artikelLikes, artikelpublicationDate) {
@@ -22,7 +20,7 @@ class Artikels {
     }
 }
 
-
+// getting the article data
 let artikelsArray = [];
 async function getArtikels() {
     const response = await fetch('https://thecrew.cc/news/read.php');
