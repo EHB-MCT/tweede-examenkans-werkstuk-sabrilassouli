@@ -21,3 +21,22 @@ class Artikels {
         this.artikelpublicationDate = artikelpublicationDate;
     }
 }
+
+
+let artikelsArray = [];
+async function getArtikels() {
+    const response = await fetch('https://thecrew.cc/news/read.php');
+    const data = await response.json();
+
+    //getting the data and making an article
+   
+    let arrayLengte = data.news.length;
+    artikelsArray = [];
+
+    for (let i = 0; i < arrayLengte; i++) {
+        let artikel = new Artikels(data.news[i].UUID, data.news[i].title, data.news[i].content, data.news[i].imageURI, data.news[i].likes);
+        artikelsArray.push(artikel);
+    }
+
+}
+getArtikels();
