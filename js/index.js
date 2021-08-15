@@ -33,6 +33,6 @@ const EHBnews = {
             document.getElementById('artikels').innerHTML = htmlString;
         });
     }
-}
+};
 
 EHBnews.initFields();
