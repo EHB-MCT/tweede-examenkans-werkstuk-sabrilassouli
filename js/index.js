@@ -12,10 +12,10 @@ const EHBnews = {
             e.preventDefault();
             const search = document.getElementById('artikelInputField').value;
             console.log(search);
-            this.getArtikel();
+            this.getArtikel(search);
         });
     },
-    async getArtikel() {
+    async getArtikel(content) {
         fetch(`https://thecrew.cc/news/read.php`)
         .then(response => {
             return response.json();
@@ -26,7 +26,7 @@ const EHBnews = {
                 <h2>id: ${data.news.UUID}</h2>
                 <h2>Title: ${data.news.title}</h2>
                 <h2>content: ${data.news.content}</h2>
-                <img src="https://cdn.uc.assets.prezly.com/f77522a0-0552-4748-aa72-994de681b71b/-/resize/2216x/-/quality/best/-/format/auto/"
+                <img src=”${data.news.imageURI}”>
                 <h2>date: ${data.news.publicationDate}</h2>
                 <h2>likes: ${data.news.likes}</h2>
             `;
