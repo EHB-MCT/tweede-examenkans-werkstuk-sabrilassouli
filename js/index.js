@@ -1,6 +1,4 @@
 "use strict";
-
-
 //URL
 //https://thecrew.cc/news/read.php
 
@@ -65,3 +63,20 @@ function showArtikles(ArtikelsData) {
   
 
 }
+
+//making a searchbar
+
+const searchBarInput = document.getElementById('searchBarInput');
+console.log(searchBarInput);
+
+searchBarInput.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredArtikels = artikelsArray.filter((character) => {
+        return (
+            character.artikelTitle.toLowerCase().includes(searchString) ||
+            character.artikelContent.toLowerCase().includes(searchString)
+        );
+    });
+    showArtikles(filteredArtikels);
+});
