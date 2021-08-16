@@ -1,19 +1,39 @@
-  
-body {
-  font-family: sans-serif;
-  padding: 20px;
-}
+  body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #413f3b;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  color: #0d0d0d;
-}
-main {
-  margin: auto;
-  display: flex;
-}
-#container {
-  width: 100vw;
-  height:  100vh;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    color: #0d0d0d;
+  }
+
+  main {
+    margin: auto;
+    display: flex;
+  }
+
+  #container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  img {
+    width: 90%;
+  }
+
+  #Artikels-container {
+background-color: lightblue;
+padding: 1%;
+margin-top: 10%;
+  }
+  #searchbarContainer {
+    padding-bottom: 100px;
+    
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 5% ;
+  }
+  
