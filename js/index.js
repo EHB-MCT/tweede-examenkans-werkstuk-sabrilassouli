@@ -2,11 +2,6 @@
 //URL
 //https://thecrew.cc/news/read.php
 
-
-// arrays sorten op likes
-// liken functie
-// searchbar toevoegen met search functie
-
 class Artikels {
     constructor(artikelUUID, artikelTitle, artikelImage, artikelContent, artikelLikes, artikelpublicationDate) {
         this.artikelUUID = artikelUUID;
