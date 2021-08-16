@@ -103,3 +103,23 @@ searchBarInput.addEventListener('keyup', (e) => {
 });
 
 
+// sort by likes
+
+document.getElementById('sortLikes').addEventListener('click', sortLikes);
+
+
+
+function sortLikes() {
+	console.log('klick');
+    if (sortLikes === 'desc') {
+		    artikelsArray = artikelsArray.sort((a, b) => parseFloat(a.artikelLikes) - parseFloat(b.artikelLikes));
+		sortLikes = 'asc';
+        console.log('option 1');
+	} else {
+		artikelsArray = artikelsArray.sort((a, b) => parseFloat(b.artikelLikes) - parseFloat(a.artikelLikes));
+		sortLikes = 'desc';
+        console.log('option 2');
+        
+	}
+	showArtikles(artikelsArray);	
+}
